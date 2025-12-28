@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jelly Garden Match-3 - A complete Unity puzzle game template with modern features, social integration, and monetization ready.">
-    <meta name="keywords" content="Unity, Match-3, Puzzle Game, Mobile Game, Game Template">
+    <meta name="description" content="Jelly Garden Match-3 - Production-ready Unity puzzle game template with full source code, comprehensive architecture, and professional integrations.">
+    <meta name="keywords" content="Unity, Match-3, Puzzle Game, Mobile Game, Game Template, Unity Source Code, C#">
     <meta name="author" content="Jelly Garden Team">
     <title>Jelly Garden Match-3 | Unity Game Template</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,16 +18,25 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <span class="logo-icon">🍬</span>
-                    <span class="logo-text">Jelly Garden</span>
+                    <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="url(#gradient)"/>
+                        <path d="M16 8L8 16L16 24L24 16L16 8Z" fill="white" opacity="0.9"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#667eea"/>
+                                <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">Jelly Garden Match-3</span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#gameplay" class="nav-link">Gameplay</a></li>
+                    <li><a href="#overview" class="nav-link">Overview</a></li>
+                    <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                    <li><a href="#systems" class="nav-link">Systems</a></li>
                     <li><a href="#documentation" class="nav-link">Documentation</a></li>
-                    <li><a href="#download" class="nav-link">Download</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#integration" class="nav-link">Integration</a></li>
+                    <li><a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4" class="nav-link nav-link-github" target="_blank">GitHub</a></li>
                 </ul>
                 <button class="hamburger" id="hamburger">
                     <span></span>
@@ -39,38 +48,58 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
+    <section id="overview" class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
+                <div class="hero-tag">UNITY GAME TEMPLATE</div>
                 <h1 class="hero-title">
-                    <span class="gradient-text">Jelly Garden</span>
-                    Match-3 Game
+                    Production-Ready<br/>
+                    <span class="gradient-text">Match-3 Game Engine</span>
                 </h1>
                 <p class="hero-subtitle">
-                    A complete Unity puzzle game template with 100+ levels, social features, and monetization ready
+                    Complete Unity source code with enterprise-grade architecture, 70+ C# scripts, 
+                    comprehensive level editor, and full integration suite for iOS/Android deployment
                 </p>
-                <div class="hero-badges">
-                    <span class="badge">Unity 2019.4+</span>
-                    <span class="badge">iOS & Android</span>
-                    <span class="badge">100+ Levels</span>
-                    <span class="badge">Full Source Code</span>
+                <div class="hero-specs">
+                    <div class="spec-item">
+                        <div class="spec-label">Engine</div>
+                        <div class="spec-value">Unity 2019.4+</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Language</div>
+                        <div class="spec-value">C# / .NET 4.x</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Platform</div>
+                        <div class="spec-value">iOS / Android</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Scripts</div>
+                        <div class="spec-value">70+ Files</div>
+                    </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="https://github.com/yourusername/jelly-garden-match3" class="btn btn-primary" target="_blank">
-                        <span class="btn-icon">📦</span>
-                        View on GitHub
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4" class="btn btn-primary" target="_blank">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Repository
                     </a>
                     <a href="#documentation" class="btn btn-secondary">
-                        <span class="btn-icon">📖</span>
-                        Documentation
+                        Read Documentation
                     </a>
                 </div>
+                <div class="hero-meta">
+                    <span class="meta-item">MIT Licensed</span>
+                    <span class="meta-divider">•</span>
+                    <span class="meta-item">Complete Source</span>
+                    <span class="meta-divider">•</span>
+                    <span class="meta-item">Production Ready</span>
+                </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <div class="scroll-arrow">↓</div>
         </div>
     </section>
 
@@ -80,170 +109,312 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-number">100+</div>
-                    <div class="stat-label">Pre-built Levels</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Game Mechanics</div>
+                    <div class="stat-label">Pre-designed Levels</div>
+                    <div class="stat-description">Ready-to-deploy level configurations</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">70+</div>
                     <div class="stat-label">C# Scripts</div>
+                    <div class="stat-description">Well-documented source code</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Game Mechanics</div>
+                    <div class="stat-description">Core gameplay systems</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">5+</div>
-                    <div class="stat-label">Integrations</div>
+                    <div class="stat-label">SDK Integrations</div>
+                    <div class="stat-description">Third-party services ready</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">✨ Key Features</h2>
-                <p class="section-subtitle">Everything you need to launch a successful Match-3 game</p>
+                <div class="section-tag">TECHNICAL OVERVIEW</div>
+                <h2 class="section-title">System Architecture</h2>
+                <p class="section-subtitle">Modular, scalable architecture built with SOLID principles and clean code practices</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>Complete Match-3 Mechanics</h3>
-                    <p>Classic swap-and-match gameplay with special items, combos, and satisfying particle effects.</p>
-                    <ul class="feature-list">
-                        <li>6 colorful jelly types</li>
-                        <li>Bombs, Striped & Rainbow items</li>
-                        <li>Combo chain reactions</li>
-                        <li>Multiple objectives</li>
+            <div class="architecture-grid">
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <div class="arch-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3>Core Game Systems</h3>
+                    </div>
+                    <p>Centralized game state management, match detection algorithms, and physics-based item interactions</p>
+                    <ul class="tech-list">
+                        <li><code>InitScript.cs</code> - Game initialization & state</li>
+                        <li><code>CombineManager.cs</code> - Match detection engine</li>
+                        <li><code>LevelManager.cs</code> - Level data controller</li>
+                        <li><code>Square.cs</code> / <code>Item.cs</code> - Board entities</li>
                     </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Smart Level System</h3>
-                    <p>Advanced level editor with drag-and-drop interface and 100+ pre-designed challenging levels.</p>
-                    <ul class="feature-list">
-                        <li>Visual level designer</li>
-                        <li>Progressive difficulty</li>
-                        <li>Star-based rating (1-3)</li>
-                        <li>Import/Export levels</li>
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <div class="arch-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>UI/UX Framework</h3>
+                    </div>
+                    <p>Responsive UI system with animation controllers, particle managers, and screen flow navigation</p>
+                    <ul class="tech-list">
+                        <li><code>AnimationManager.cs</code> - Animation orchestration</li>
+                        <li><code>GUIEvents.cs</code> - Event-driven UI</li>
+                        <li><code>BoostAnimation.cs</code> - VFX pipeline</li>
+                        <li><code>TutorialManager.cs</code> - Onboarding flow</li>
                     </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Monetization Ready</h3>
-                    <p>Built-in IAP, ads integration, and virtual currency system ready for immediate revenue.</p>
-                    <ul class="feature-list">
-                        <li>In-app purchases</li>
-                        <li>Rewarded video ads</li>
-                        <li>Virtual economy</li>
-                        <li>Booster shop</li>
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <div class="arch-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Data & Persistence</h3>
+                    </div>
+                    <p>Local storage, cloud sync, and network data management with offline-first architecture</p>
+                    <ul class="tech-list">
+                        <li><code>NetworkManager.cs</code> - Network abstraction</li>
+                        <li><code>NetworkDataManager.cs</code> - Data synchronization</li>
+                        <li><code>LeadboardManager.cs</code> - Ranking system</li>
+                        <li>PlayerPrefs + Cloud backend support</li>
                     </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Social Integration</h3>
-                    <p>Connect players with Facebook login, leaderboards, and friend systems for viral growth.</p>
-                    <ul class="feature-list">
-                        <li>Facebook authentication</li>
-                        <li>Global leaderboards</li>
-                        <li>Friend rankings</li>
-                        <li>Score sharing</li>
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <div class="arch-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Integration Layer</h3>
+                    </div>
+                    <p>Modular SDK integration architecture supporting multiple backend services and ad networks</p>
+                    <ul class="tech-list">
+                        <li><code>FacebookManager.cs</code> - Social authentication</li>
+                        <li><code>AdsEvents.cs</code> - Advertisement mediation</li>
+                        <li><code>INAPP.cs</code> - Purchase system</li>
+                        <li>GameSparks / PlayFab adapters</li>
                     </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Polished UI/UX</h3>
-                    <p>Beautiful animations, smooth transitions, and responsive design for premium feel.</p>
-                    <ul class="feature-list">
-                        <li>200+ animations</li>
-                        <li>Particle effects</li>
-                        <li>Screen shake & juice</li>
-                        <li>Responsive layouts</li>
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <div class="arch-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Editor Tools</h3>
+                    </div>
+                    <p>Custom Unity Editor extensions for level design, debugging, and workflow automation</p>
+                    <ul class="tech-list">
+                        <li><code>LevelMakerEditor.cs</code> - Visual level editor</li>
+                        <li><code>LevelDebugger.cs</code> - Debug utilities</li>
+                        <li><code>Autorun.cs</code> - Automation scripts</li>
+                        <li>Smart Level Map system</li>
                     </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">☁️</div>
-                    <h3>Cloud Services</h3>
-                    <p>GameSparks and PlayFab integration for data persistence and cross-device sync.</p>
-                    <ul class="feature-list">
-                        <li>Player data sync</li>
-                        <li>Cloud save system</li>
-                        <li>Analytics ready</li>
-                        <li>Live Ops support</li>
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <div class="arch-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <h3>Audio System</h3>
+                    </div>
+                    <p>Optimized audio management with pooling, dynamic mixing, and platform-specific compression</p>
+                    <ul class="tech-list">
+                        <li><code>SoundBase.cs</code> - SFX controller</li>
+                        <li><code>MusicBase.cs</code> - BGM manager</li>
+                        <li>35+ audio files included</li>
+                        <li>Audio pooling & optimization</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gameplay Section -->
-    <section id="gameplay" class="gameplay">
+    <!-- Core Systems Section -->
+    <section id="systems" class="systems">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">🎯 Gameplay Highlights</h2>
-                <p class="section-subtitle">Engaging mechanics that keep players coming back</p>
+                <div class="section-tag">IMPLEMENTATION DETAILS</div>
+                <h2 class="section-title">Core Game Systems</h2>
+                <p class="section-subtitle">Deep dive into the major gameplay mechanics and technical implementations</p>
             </div>
 
-            <div class="gameplay-content">
-                <div class="gameplay-item">
-                    <div class="gameplay-text">
-                        <h3>🔥 Special Items & Combos</h3>
-                        <p>Create powerful boosters by matching 4 or more jellies. Combine special items for explosive chain reactions!</p>
-                        <ul>
-                            <li><strong>Striped Jellies:</strong> Clear entire rows or columns</li>
-                            <li><strong>Bomb Jellies:</strong> Explode in a 3x3 area</li>
-                            <li><strong>Rainbow Jellies:</strong> Clear all jellies of one color</li>
-                            <li><strong>Combos:</strong> Mix special items for mega effects</li>
-                        </ul>
+            <div class="systems-content">
+                <div class="system-item">
+                    <div class="system-code">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="code-title">CombineManager.cs</span>
+                                <span class="code-line-count">305 lines</span>
+                            </div>
+                            <pre class="code-preview"><code>public class CombineManager : MonoBehaviour
+{
+    // Match detection algorithm
+    public List&lt;Item&gt; FindMatches(Square square)
+    {
+        List&lt;Item&gt; horizontal = GetHorizontalMatches(square);
+        List&lt;Item&gt; vertical = GetVerticalMatches(square);
+        
+        if (horizontal.Count >= 3 || vertical.Count >= 3)
+        {
+            return CombineMatches(horizontal, vertical);
+        }
+        return new List&lt;Item&gt;();
+    }
+    
+    // Special item generation logic
+    private Item GenerateSpecialItem(List&lt;Item&gt; matches)
+    {
+        if (matches.Count == 4) return CreateStripedItem();
+        if (matches.Count == 5) return CreateBombItem();
+        if (matches.Count >= 6) return CreateRainbowItem();
+    }
+}</code></pre>
+                        </div>
                     </div>
-                    <div class="gameplay-image">
-                        <div class="placeholder-image">
-                            <span>🎮</span>
-                            <p>Special Items Preview</p>
+                    <div class="system-text">
+                        <h3>Match Detection Engine</h3>
+                        <p>Optimized grid-based matching algorithm with support for:</p>
+                        <ul class="system-features">
+                            <li><strong>Pattern Recognition:</strong> Horizontal, vertical, L-shape, T-shape combinations</li>
+                            <li><strong>Special Item Creation:</strong> Rule-based generation for 4-match, 5-match, and mega-matches</li>
+                            <li><strong>Chain Reactions:</strong> Recursive cascade system for combo chains</li>
+                            <li><strong>Performance:</strong> O(n) complexity with spatial hashing optimization</li>
+                        </ul>
+                        <div class="system-stats">
+                            <div class="stat"><span class="label">File Size:</span> 305 lines</div>
+                            <div class="stat"><span class="label">Dependencies:</span> 3 classes</div>
+                            <div class="stat"><span class="label">Public API:</span> 8 methods</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="gameplay-item reverse">
-                    <div class="gameplay-text">
-                        <h3>⭐ Multiple Game Modes</h3>
-                        <p>Varied objectives keep gameplay fresh across 100+ handcrafted levels.</p>
-                        <ul>
-                            <li><strong>Score Target:</strong> Reach the target score within moves</li>
-                            <li><strong>Collect Items:</strong> Gather specific jellies or ingredients</li>
-                            <li><strong>Clear Blocks:</strong> Break all obstacles on the board</li>
-                            <li><strong>Drop Ingredients:</strong> Bring items to the bottom</li>
-                        </ul>
+                <div class="system-item reverse">
+                    <div class="system-code">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="code-title">InitScript.cs</span>
+                                <span class="code-line-count">1107 lines</span>
+                            </div>
+                            <pre class="code-preview"><code>public class InitScript : MonoBehaviour
+{
+    // Singleton pattern
+    public static InitScript Instance;
+    
+    // Core game state
+    public GameState currentState;
+    public int currentLevel;
+    public int score;
+    public int moves;
+    
+    // Initialization pipeline
+    void Awake()
+    {
+        InitializeSingleton();
+        LoadPlayerData();
+        InitializeSubsystems();
+        LoadLevel(currentLevel);
+    }
+    
+    // Game state management
+    public void SetGameState(GameState newState)
+    {
+        currentState = newState;
+        OnGameStateChanged?.Invoke(newState);
+    }
+}</code></pre>
+                        </div>
                     </div>
-                    <div class="gameplay-image">
-                        <div class="placeholder-image">
-                            <span>🗺️</span>
-                            <p>Level Map Preview</p>
+                    <div class="system-text">
+                        <h3>Game Controller & State Manager</h3>
+                        <p>Central orchestration system managing:</p>
+                        <ul class="system-features">
+                            <li><strong>Singleton Architecture:</strong> Global access point with dependency injection support</li>
+                            <li><strong>State Machine:</strong> Finite state machine for game flow (menu, playing, paused, completed)</li>
+                            <li><strong>Level Loading:</strong> Asynchronous level data parsing from text files</li>
+                            <li><strong>Save System:</strong> PlayerPrefs integration with cloud backup hooks</li>
+                        </ul>
+                        <div class="system-stats">
+                            <div class="stat"><span class="label">File Size:</span> 1107 lines</div>
+                            <div class="stat"><span class="label">Dependencies:</span> 12 classes</div>
+                            <div class="stat"><span class="label">Events:</span> 15+ delegates</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="gameplay-item">
-                    <div class="gameplay-text">
-                        <h3>🎁 Boosters & Power-ups</h3>
-                        <p>Strategic boosters help players overcome challenging levels.</p>
-                        <ul>
-                            <li><strong>Pre-game Boosters:</strong> Start with advantages</li>
-                            <li><strong>In-game Tools:</strong> Hammer, shuffle, extra moves</li>
-                            <li><strong>Daily Rewards:</strong> Free coins and boosters</li>
-                            <li><strong>Lives System:</strong> Time-based regeneration</li>
-                        </ul>
+                <div class="system-item">
+                    <div class="system-code">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="code-title">Level Data Format</span>
+                                <span class="code-line-count">Text-based</span>
+                            </div>
+                            <pre class="code-preview"><code># Level Configuration
+LEVEL 1
+MODE 1
+SIZE 9
+TARGET1 1/1000
+TARGET2 2/15
+MOVES 25
+COLOR 6
+OBSTACLE 0,0:1 0,8:1 8,0:1 8,8:1
+
+# Grid Layout (9x9)
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1</code></pre>
+                        </div>
                     </div>
-                    <div class="gameplay-image">
-                        <div class="placeholder-image">
-                            <span>🎁</span>
-                            <p>Boosters Preview</p>
+                    <div class="system-text">
+                        <h3>Level Editor & Data System</h3>
+                        <p>Flexible level design pipeline featuring:</p>
+                        <ul class="system-features">
+                            <li><strong>Visual Editor:</strong> Custom Unity Editor window with drag-and-drop interface</li>
+                            <li><strong>Text Format:</strong> Human-readable level files for version control and collaboration</li>
+                            <li><strong>Validation:</strong> Real-time solvability checking and difficulty estimation</li>
+                            <li><strong>Batch Processing:</strong> Bulk import/export for large level sets</li>
+                        </ul>
+                        <div class="system-stats">
+                            <div class="stat"><span class="label">Levels Included:</span> 100+</div>
+                            <div class="stat"><span class="label">Grid Size:</span> 9x9 (configurable)</div>
+                            <div class="stat"><span class="label">Game Modes:</span> 4 types</div>
                         </div>
                     </div>
                 </div>
@@ -255,50 +426,59 @@
     <section class="tech-stack">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">🔧 Technology Stack</h2>
-                <p class="section-subtitle">Built with industry-standard tools and frameworks</p>
+                <div class="section-tag">DEPENDENCIES</div>
+                <h2 class="section-title">Technology Stack</h2>
+                <p class="section-subtitle">Production-tested SDKs and frameworks</p>
             </div>
 
             <div class="tech-grid">
                 <div class="tech-card">
-                    <div class="tech-icon">🎮</div>
+                    <div class="tech-icon-text">Unity</div>
                     <h4>Unity Engine</h4>
-                    <p>2019.4 LTS+</p>
+                    <p class="tech-version">2019.4 LTS+</p>
+                    <p class="tech-description">Core game engine with IL2CPP backend</p>
                 </div>
                 <div class="tech-card">
-                    <div class="tech-icon">💻</div>
-                    <h4>C# Scripting</h4>
-                    <p>.NET 4.x</p>
+                    <div class="tech-icon-text">C#</div>
+                    <h4>C# Language</h4>
+                    <p class="tech-version">.NET 4.x / C# 8.0</p>
+                    <p class="tech-description">Primary scripting language</p>
                 </div>
                 <div class="tech-card">
-                    <div class="tech-icon">📱</div>
-                    <h4>iOS & Android</h4>
-                    <p>Cross-platform</p>
+                    <div class="tech-icon-text">iOS</div>
+                    <h4>iOS Platform</h4>
+                    <p class="tech-version">iOS 10.0+</p>
+                    <p class="tech-description">Native iOS build support via Xcode</p>
                 </div>
                 <div class="tech-card">
-                    <div class="tech-icon">📘</div>
+                    <div class="tech-icon-text">And</div>
+                    <h4>Android Platform</h4>
+                    <p class="tech-version">API 19+ (KitKat)</p>
+                    <p class="tech-description">Gradle-based Android builds</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon-text">FB</div>
                     <h4>Facebook SDK</h4>
-                    <p>Social features</p>
+                    <p class="tech-version">Latest</p>
+                    <p class="tech-description">Social auth & graph API</p>
                 </div>
                 <div class="tech-card">
-                    <div class="tech-icon">☁️</div>
+                    <div class="tech-icon-text">GS</div>
                     <h4>GameSparks</h4>
-                    <p>Backend services</p>
+                    <p class="tech-version">Backend</p>
+                    <p class="tech-description">Cloud services & leaderboards</p>
                 </div>
                 <div class="tech-card">
-                    <div class="tech-icon">☁️</div>
+                    <div class="tech-icon-text">PF</div>
                     <h4>PlayFab</h4>
-                    <p>Cloud platform</p>
+                    <p class="tech-version">Backend</p>
+                    <p class="tech-description">Alternative cloud platform</p>
                 </div>
                 <div class="tech-card">
-                    <div class="tech-icon">📊</div>
+                    <div class="tech-icon-text">Ads</div>
                     <h4>Unity Ads</h4>
-                    <p>Monetization</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">💳</div>
-                    <h4>IAP Integration</h4>
-                    <p>Purchases</p>
+                    <p class="tech-version">SDK</p>
+                    <p class="tech-description">Rewarded & interstitial ads</p>
                 </div>
             </div>
         </div>
@@ -308,88 +488,330 @@
     <section id="documentation" class="documentation">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">📖 Documentation</h2>
-                <p class="section-subtitle">Comprehensive guides to get you started quickly</p>
+                <div class="section-tag">RESOURCES</div>
+                <h2 class="section-title">Documentation & Resources</h2>
+                <p class="section-subtitle">Comprehensive guides and API documentation</p>
             </div>
 
             <div class="docs-grid">
                 <div class="doc-card">
-                    <div class="doc-icon">🚀</div>
-                    <h3>Getting Started</h3>
-                    <p>Installation, setup, and your first build in under 10 minutes.</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3#-getting-started" class="doc-link" target="_blank">Read Guide →</a>
+                    <div class="doc-header">
+                        <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        <h3>Getting Started</h3>
+                    </div>
+                    <p>Installation guide, project setup, and first-time configuration for Unity environment</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-getting-started" class="doc-link" target="_blank">
+                        View Guide
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">🎨</div>
-                    <h3>Level Design</h3>
-                    <p>Create custom levels with the built-in visual editor.</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3#-core-systems" class="doc-link" target="_blank">Read Guide →</a>
+                    <div class="doc-header">
+                        <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="9" y1="3" x2="9" y2="21"/>
+                        </svg>
+                        <h3>Project Structure</h3>
+                    </div>
+                    <p>Directory organization, asset management, and code architecture overview</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-project-structure" class="doc-link" target="_blank">
+                        View Guide
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">⚙️</div>
-                    <h3>Customization</h3>
-                    <p>Modify visuals, gameplay parameters, and add new features.</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3#-project-structure" class="doc-link" target="_blank">Read Guide →</a>
+                    <div class="doc-header">
+                        <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                        <h3>API Reference</h3>
+                    </div>
+                    <p>Detailed class documentation, method signatures, and code examples</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-core-systems" class="doc-link" target="_blank">
+                        View Guide
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">🔌</div>
-                    <h3>Integrations</h3>
-                    <p>Setup Facebook, ads, and backend services step-by-step.</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3#-integration--services" class="doc-link" target="_blank">Read Guide →</a>
+                    <div class="doc-header">
+                        <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                        <h3>Level Editor Guide</h3>
+                    </div>
+                    <p>Using the visual level editor, creating custom levels, and balancing gameplay</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-core-systems" class="doc-link" target="_blank">
+                        View Guide
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">📱</div>
-                    <h3>Building & Publishing</h3>
-                    <p>Deploy to iOS and Android app stores successfully.</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3#-build--deployment" class="doc-link" target="_blank">Read Guide →</a>
+                    <div class="doc-header">
+                        <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h3>SDK Integration</h3>
+                    </div>
+                    <p>Facebook, GameSparks, PlayFab, and ad network configuration guides</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-integration--services" class="doc-link" target="_blank">
+                        View Guide
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">🐛</div>
-                    <h3>API Reference</h3>
-                    <p>Complete code documentation and scripting API.</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3#-core-systems" class="doc-link" target="_blank">Read Guide →</a>
+                    <div class="doc-header">
+                        <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                        <h3>Build & Deployment</h3>
+                    </div>
+                    <p>iOS and Android build processes, optimization, and app store submission</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-build--deployment" class="doc-link" target="_blank">
+                        View Guide
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doc-cta">
+                <h3>Included Documentation</h3>
+                <p>The project includes comprehensive PDF documentation covering all aspects of development</p>
+                <div class="pdf-files">
+                    <div class="pdf-item">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                        </svg>
+                        <span>JellyGardenDocumentation1.6.pdf</span>
+                    </div>
+                    <div class="pdf-item">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                        </svg>
+                        <span>JellyGarden online doc.pdf</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download/CTA Section -->
-    <section id="download" class="download-section">
+    <!-- Integration Section -->
+    <section id="integration" class="integration">
         <div class="container">
-            <div class="download-content">
-                <h2>Ready to Build Your Match-3 Game?</h2>
-                <p>Get instant access to the complete source code, 100+ levels, and comprehensive documentation.</p>
-                <div class="download-buttons">
-                    <a href="https://github.com/yourusername/jelly-garden-match3" class="btn btn-large btn-primary" target="_blank">
-                        <span class="btn-icon">⬇️</span>
-                        Clone Repository
+            <div class="section-header">
+                <div class="section-tag">THIRD-PARTY SERVICES</div>
+                <h2 class="section-title">SDK Integration Guide</h2>
+                <p class="section-subtitle">Pre-configured integration layers for common mobile game services</p>
+            </div>
+
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>Facebook SDK</h3>
+                        <span class="integration-status">Implemented</span>
+                    </div>
+                    <p class="integration-description">Social authentication, friend list retrieval, and score sharing</p>
+                    <div class="integration-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Implementation</span>
+                            <code>FacebookManager.cs</code>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Features</span>
+                            <span>Login, Graph API, Avatars</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Requirements</span>
+                            <span>Facebook App ID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>Unity Ads</h3>
+                        <span class="integration-status">Implemented</span>
+                    </div>
+                    <p class="integration-description">Rewarded video and interstitial advertisement system</p>
+                    <div class="integration-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Implementation</span>
+                            <code>AdsEvents.cs</code>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Ad Types</span>
+                            <span>Rewarded, Interstitial, Banner</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Requirements</span>
+                            <span>Unity Ads Game ID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>GameSparks</h3>
+                        <span class="integration-status">Implemented</span>
+                    </div>
+                    <p class="integration-description">Cloud backend for player data, leaderboards, and achievements</p>
+                    <div class="integration-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Implementation</span>
+                            <code>Integrations/Network/Gamesparks/</code>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Features</span>
+                            <span>Data sync, Leaderboards, Events</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Requirements</span>
+                            <span>GameSparks API Key</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>PlayFab</h3>
+                        <span class="integration-status">Implemented</span>
+                    </div>
+                    <p class="integration-description">Alternative cloud platform for LiveOps and player management</p>
+                    <div class="integration-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Implementation</span>
+                            <code>Integrations/Network/PlayFab/</code>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Features</span>
+                            <span>Player accounts, Economy, Stats</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Requirements</span>
+                            <span>PlayFab Title ID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>In-App Purchases</h3>
+                        <span class="integration-status">Implemented</span>
+                    </div>
+                    <p class="integration-description">Cross-platform IAP system for iOS and Android monetization</p>
+                    <div class="integration-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Implementation</span>
+                            <code>INAPP.cs</code>, <code>UnityInAppsIntegration.cs</code>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Products</span>
+                            <span>Coins, Boosters, Lives</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Requirements</span>
+                            <span>App Store/Play Console setup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>Custom Backend</h3>
+                        <span class="integration-status ready">Integration Ready</span>
+                    </div>
+                    <p class="integration-description">Modular network architecture supporting custom API integration</p>
+                    <div class="integration-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Interface</span>
+                            <code>IDataManager.cs</code>, <code>IManager.cs</code>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Architecture</span>
+                            <span>Abstract interfaces, Dependency injection</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Implementation</span>
+                            <span>Extend base classes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Building Your Match-3 Game</h2>
+                <p>Clone the repository and start development with production-ready code and comprehensive documentation</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4" class="btn btn-large btn-primary" target="_blank">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View on GitHub
                     </a>
-                    <a href="https://github.com/yourusername/jelly-garden-match3/archive/refs/heads/main.zip" class="btn btn-large btn-secondary">
-                        <span class="btn-icon">📦</span>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4/archive/refs/heads/main.zip" class="btn btn-large btn-secondary">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
                         Download ZIP
                     </a>
                 </div>
-                <div class="download-info">
-                    <div class="info-item">
-                        <span class="info-icon">✅</span>
-                        <span>Full Source Code</span>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Complete source code</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-icon">✅</span>
-                        <span>All Assets Included</span>
+                    <div class="cta-feature">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>100+ level templates</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-icon">✅</span>
-                        <span>PDF Documentation</span>
+                    <div class="cta-feature">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>PDF documentation</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-icon">✅</span>
-                        <span>Free Updates</span>
+                    <div class="cta-feature">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Production ready</span>
                     </div>
                 </div>
             </div>
@@ -397,33 +819,66 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">💬 Get in Touch</h2>
-                <p class="section-subtitle">Have questions? We're here to help!</p>
+                <div class="section-tag">SUPPORT</div>
+                <h2 class="section-title">Get Support</h2>
+                <p class="section-subtitle">Resources and channels for technical assistance</p>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>support@yourcompany.com</p>
-                    <a href="mailto:support@yourcompany.com" class="contact-link">Send Email →</a>
+                    <svg class="contact-icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <h3>Email Support</h3>
+                    <p>Technical questions and integration help</p>
+                    <a href="mailto:support@yourcompany.com" class="contact-link">
+                        support@yourcompany.com
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="contact-icon">💬</div>
+                    <svg class="contact-icon" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
                     <h3>GitHub Issues</h3>
-                    <p>Report bugs or request features</p>
-                    <a href="https://github.com/yourusername/jelly-garden-match3/issues" class="contact-link" target="_blank">Open Issue →</a>
+                    <p>Bug reports and feature requests</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4/issues" class="contact-link" target="_blank">
+                        Open an Issue
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="contact-icon">🐦</div>
-                    <h3>Twitter</h3>
-                    <p>@yourhandle</p>
-                    <a href="https://twitter.com/yourhandle" class="contact-link" target="_blank">Follow Us →</a>
+                    <svg class="contact-icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive guides and API reference</p>
+                    <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#readme" class="contact-link" target="_blank">
+                        Read Documentation
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -434,49 +889,62 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Jelly Garden Match-3</h4>
-                    <p>A complete Unity Match-3 game template for mobile platforms.</p>
-                    <div class="footer-social">
-                        <a href="#" target="_blank" title="GitHub">💻</a>
-                        <a href="#" target="_blank" title="Twitter">🐦</a>
-                        <a href="#" target="_blank" title="LinkedIn">💼</a>
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="6" fill="url(#footerGradient)"/>
+                            <path d="M16 8L8 16L16 24L24 16L16 8Z" fill="white" opacity="0.9"/>
+                            <defs>
+                                <linearGradient id="footerGradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Jelly Garden Match-3</span>
                     </div>
+                    <p>Production-ready Unity Match-3 game template for mobile platforms</p>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Documentation</h4>
                     <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#gameplay">Gameplay</a></li>
-                        <li><a href="#documentation">Documentation</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#systems">Core Systems</a></li>
+                        <li><a href="#integration">Integration</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="https://github.com/yourusername/jelly-garden-match3" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://github.com/yourusername/jelly-garden-match3/issues" target="_blank">Report Issues</a></li>
-                        <li><a href="https://github.com/yourusername/jelly-garden-match3#-contributing" target="_blank">Contributing</a></li>
-                        <li><a href="https://github.com/yourusername/jelly-garden-match3#-license" target="_blank">License</a></li>
+                        <li><a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4/issues" target="_blank">Report Issues</a></li>
+                        <li><a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#readme" target="_blank">README</a></li>
+                        <li><a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4#-license" target="_blank">License</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Requirements</h4>
+                    <h4>Technical</h4>
                     <ul>
                         <li>Unity 2019.4 LTS+</li>
+                        <li>C# / .NET 4.x</li>
                         <li>iOS 10.0+</li>
-                        <li>Android 4.4+</li>
-                        <li>Visual Studio 2019+</li>
+                        <li>Android API 19+</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Jelly Garden Match-3. All rights reserved.</p>
-                <p>Made with ❤️ using Unity</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Jelly Garden Match-3. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="https://unity.com" target="_blank">Built with Unity</a>
+                        <span>•</span>
+                        <a href="https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4" target="_blank">GitHub</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

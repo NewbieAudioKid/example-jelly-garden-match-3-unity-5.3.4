@@ -259,12 +259,12 @@ cards.forEach(card => {
 });
 
 // ========================================
-// Console Easter Egg
+// Console Message
 // ========================================
 
-console.log('%c🍬 Jelly Garden Match-3', 'font-size: 20px; font-weight: bold; color: #FF6B9D;');
-console.log('%cInterested in the code? Check out our GitHub!', 'font-size: 14px; color: #667eea;');
-console.log('%chttps://github.com/yourusername/jelly-garden-match3', 'font-size: 12px; color: #4ECDC4;');
+console.log('%cJelly Garden Match-3', 'font-size: 20px; font-weight: bold; color: #667eea;');
+console.log('%cProduction-ready Unity Match-3 Game Template', 'font-size: 14px; color: #764ba2;');
+console.log('%chttps://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4', 'font-size: 12px; color: #667eea;');
 
 // ========================================
 // Performance Optimization
