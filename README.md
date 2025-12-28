@@ -2,6 +2,8 @@
 
 <div align="center">
 
+**Language / 语言 / 言語:** [English](README.md) | [中文](README_zh.md) | [日本語](README_ja.md)
+
 ![Unity](https://img.shields.io/badge/Unity-2019.4+-black?style=flat-square&logo=unity)
 ![C#](https://img.shields.io/badge/C%23-8.0-blue?style=flat-square&logo=c-sharp)
 ![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)
@@ -154,8 +156,8 @@ A complete Match-3 puzzle game template with modern features, social integration
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/jelly-garden-match3.git
-   cd jelly-garden-match3
+   git clone https://github.com/NewbieAudioKid/example-jelly-garden-match-3-unity-5.3.4.git
+   cd example-jelly-garden-match-3-unity-5.3.4
    ```
 
 2. **Open in Unity**
@@ -647,7 +649,7 @@ Thanks to all contributors and the Unity community for support and feedback!
 
 **Project Maintainer**: [Your Name]
 
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@NewbieAudioKid](https://github.com/NewbieAudioKid)
 - Email: contact@yourcompany.com
 - Website: [yourcompany.com](https://yourcompany.com)
 - Twitter: [@yourhandle](https://twitter.com/yourhandle)
